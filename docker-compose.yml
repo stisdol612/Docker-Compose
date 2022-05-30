@@ -1,29 +1,25 @@
-version: '3.9'
+version: "3.9"
 
 services:
   
-  Nginx:
+  web:
     image: nginx:latest
     container_name: Nginx
     restart: always
     ports:
      - 8080:80
     environment:
-      - name=value
+      - NGINX_PORT=80
 
   Ubuntu:
     image: ubuntu:latest
     container_name: Ubuntu
     restart: always
-    ports:
-      - 
 
   Linux:
     image: linuxserver/docker-compose:2.5.0-v2
     container_name: Linux
     restart: always
-    ports:
-      -
       
 
 
